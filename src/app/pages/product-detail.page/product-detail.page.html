@@ -1,0 +1,27 @@
+<div class="mt-10">
+    <div class="container-detail">
+        <div class="container-detail__images">
+            <img [src]="getProduct.image" alt="">
+        </div>
+        <div class="container-detail__info">
+            <h4>{{ getProduct.name }}</h4>
+            <p>
+                Categoria: {{ getProduct.category }}
+            </p>
+            <p>
+                Precio Detal: {{ getProduct.priceRetail | currency}} COP
+            </p>
+            <p>
+                Precio Mayor: {{ getProduct.priceHigher | currency}} COP
+            </p>
+            <p>
+                Disponible: {{ getProduct.count }}
+            </p>
+            <button class="btn-card red_button add_to_cart_button">
+                <span>
+                    Add to Cart
+                </span>
+            </button>
+        </div>
+    </div>
+</div>

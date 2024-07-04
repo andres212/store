@@ -1,0 +1,9 @@
+<div class="mt-10">
+    <app-result-search-component
+        [responseProducts]="productsFinds"
+        *ngIf="!loading; else empty"
+    >
+    </app-result-search-component>
+    <ng-template #empty>
+    </ng-template>
+</div>

@@ -1,0 +1,35 @@
+<main class="main-card-component">
+  <div class="card-component-detail" (click)="handleCardGoDetail()">
+    <img [src]="getImage()" alt="image-host" />
+    <div class="card-content-detail">
+      <h5>
+        {{ product.name }}
+      </h5>
+      <p class="price-detail">
+        Detal: $ {{ product.price[0].price | currency }}
+      </p>
+      <br />
+      <p class="price-higher">
+        <span *ngIf="isHigherPrice()">
+          Mayor: $ {{ getPriceHigher() | currency }}
+        </span>
+      </p>
+      <br />
+      <p class="item-category">
+        Categoría: {{ product?.itemCategory?.name }}
+      </p>
+      <div class="btn-card add_to_cart_button red_button">
+        <span> Add to cart </span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- <fa-icon
+    class="favorite"
+    [ngClass]="{'favorite_active' : stuffed}"
+    [icon]="stuffed ? faHeartStuffed : faHeart"
+    [title]="stuffed ? 'Eliminar de favoritos' : 'Agregar a Favoritos'"
+    size="xs"
+>
+</fa-icon> -->

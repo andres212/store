@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style file */
+@import "../src/assets/styles/main.scss";
+
+// Z-INDEX Tracking
+app-root { z-index: 1; }
+app-toast, .toast-class { z-index: 2; }

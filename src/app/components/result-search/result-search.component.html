@@ -1,0 +1,10 @@
+<div class="hv-100 container-result-search-component">
+  <div *ngIf="getProducts && getProducts.length > 0; else emptyContent" class="container-component-card">
+    <div *ngFor="let product of getProducts">
+      <app-card [product]="product" ></app-card>
+    </div>
+  </div>
+  <ng-template #emptyContent>
+    <div></div>
+  </ng-template>
+</div>
